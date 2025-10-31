@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ShoppingCart } from 'lucide-react';
 
 const navLinks = [
   { title: "Inicio", href: "#" },
@@ -23,16 +23,19 @@ const Header = () => {
         
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a key={link.title} href={link.href} className="text-white hover:text-accent-cyan transition-colors duration-300">
+            <a key={link.title} href={link.href} className="text-base text-white hover:text-accent-cyan transition-colors duration-300">
               {link.title}
             </a>
           ))}
         </div>
 
-        <div className="hidden md:flex">
-          <button className="rounded-full bg-accent-cyan px-6 py-2 font-semibold text-deep-black transition-transform duration-300 hover:scale-105">
-            Automatízate Ahora
+        <div className="hidden md:flex items-center gap-4">
+          <button className="flex items-center justify-center h-10 w-10 rounded-full bg-gradient-to-r from-accent-red to-accent-cyan text-white shadow-lg shadow-accent-red/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-accent-cyan/30">
+            <ShoppingCart className="h-5 w-5" />
           </button>
+          <a href="#contact" className="rounded-full bg-gradient-to-r from-accent-red to-accent-cyan px-6 py-2 text-base font-semibold text-white shadow-lg shadow-accent-red/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-accent-cyan/30">
+            Contáctanos
+          </a>
         </div>
 
         <div className="md:hidden">
@@ -51,9 +54,14 @@ const Header = () => {
                 {link.title}
               </a>
             ))}
-            <button className="mt-4 w-full rounded-full bg-accent-cyan px-6 py-3 font-semibold text-deep-black transition-transform duration-300 hover:scale-105">
-              Automatízate Ahora
-            </button>
+            <div className="mt-4 w-full flex items-center gap-3">
+              <button className="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-r from-accent-red to-accent-cyan text-white shadow-lg shadow-accent-red/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-accent-cyan/30">
+                <ShoppingCart className="h-6 w-6" />
+              </button>
+              <a href="#contact" className="flex-1 text-center rounded-full bg-gradient-to-r from-accent-red to-accent-cyan px-6 py-3 font-semibold text-white shadow-lg shadow-accent-red/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-accent-cyan/30" onClick={() => setIsOpen(false)}>
+                Contáctanos
+              </a>
+            </div>
           </div>
         </div>
       )}

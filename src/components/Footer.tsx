@@ -3,7 +3,7 @@ import { Twitter, Instagram, Linkedin } from 'lucide-react';
 const Footer = () => {
   return (
     <footer className="w-full border-t border-white/10 bg-dark-blue py-12">
-      <div className="container mx-auto flex flex-col items-center justify-between gap-8 px-6 md:flex-row">
+      <div className="container mx-auto max-w-4xl flex flex-col items-center justify-between gap-8 px-6 md:flex-row">
         <div className="flex items-center gap-4">
           <img src="/images/Logo.png" alt="Botsconia Logo" className="h-8 w-auto" />
           <span className="text-xl font-bold text-white">BOTSCONIA</span>

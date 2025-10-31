@@ -6,6 +6,7 @@ import HowItWorks from './components/HowItWorks';
 import Benefits from './components/Benefits';
 import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Benefits />
       <Testimonials />
       <CTA />
+      <Contact />
       <Footer />
     </main>
   )

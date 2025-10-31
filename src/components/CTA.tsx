@@ -29,15 +29,16 @@ const CTA = () => {
         >
           El futuro de la gestión de restaurantes ya está aquí. No dejes que tu negocio se quede atrás. Es hora de automatizar, optimizar y crecer.
         </motion.p>
-        <motion.button 
+        <motion.a
+          href="#contact"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, delay: 0.6, type: 'spring', stiffness: 200 }}
-          className="mt-10 rounded-full bg-gradient-to-r from-accent-cyan to-accent-red px-10 py-4 text-lg font-bold text-white shadow-lg shadow-accent-cyan/20 transition-transform duration-300 hover:scale-105"
+          className="mt-10 inline-block rounded-full bg-gradient-to-r from-accent-cyan to-accent-red px-10 py-4 text-lg font-bold text-white shadow-lg shadow-accent-cyan/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-accent-red/30"
         >
-          Transforma tu Restaurante Ahora
-        </motion.button>
+          Contáctanos
+        </motion.a>
       </div>
     </section>
   );

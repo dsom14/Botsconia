@@ -57,26 +57,26 @@ const HowItWorks = () => {
         </motion.div>
 
         <div className="relative mt-20">
-          <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-white/20"></div>
+          <div className="hidden md:block absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-white/20"></div>
 
           <motion.div
             ref={ref}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={containerVariants}
-            className="flex flex-col gap-20"
+            className="flex flex-col gap-12 md:gap-20"
           >
             {steps.map((step, index) => {
-              const isLeft = index % 2 !== 0;
+              const isRight = index % 2 === 0;
               return (
-                <motion.div 
-                  key={index} 
-                  variants={itemVariants(isLeft)}
-                  className="relative flex items-center"
+                <motion.div
+                  key={index}
+                  variants={itemVariants(!isRight)}
+                  className="relative flex flex-col md:flex-row items-center gap-4 md:gap-0"
                 >
-                  <div className={`w-full md:w-5/12 ${isLeft ? 'md:pr-16 md:text-right' : 'md:order-last md:pl-16'}`}>
+                  <div className={`w-full md:w-5/12 ${isRight ? 'md:pr-16 md:text-right md:ml-auto' : 'md:pl-16 md:mr-auto'}`}>
                     <div className="inline-block w-full rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg transition-all duration-300 hover:bg-white/10 hover:shadow-2xl hover:shadow-accent-red/10">
-                      <div className={`mb-3 flex items-center gap-4 ${isLeft ? 'md:flex-row-reverse' : ''}`}>
+                      <div className={`mb-3 flex items-center gap-4 ${isRight ? 'md:flex-row-reverse' : ''}`}>
                         <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent-red/10 text-accent-red">
                           {step.icon}
                         </div>
@@ -86,7 +86,7 @@ const HowItWorks = () => {
                     </div>
                   </div>
 
-                  <div className="absolute left-1/2 z-10 h-16 w-16 -translate-x-1/2 flex items-center justify-center rounded-full border-4 border-accent-red bg-dark-blue">
+                  <div className="relative md:absolute md:left-1/2 z-10 h-16 w-16 md:-translate-x-1/2 flex items-center justify-center rounded-full border-4 border-accent-red bg-dark-blue shrink-0">
                     <span className="text-2xl font-bold text-white">{step.step}</span>
                   </div>
                 </motion.div>

@@ -8,7 +8,7 @@ const stats = [
   { value: "∞", label: "Capacidad de Gestión" },
 ];
 
-const AnimatedStat = ({ stat }) => {
+const AnimatedStat = ({ stat }: { stat: { value: string; label: string } }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
   const controls = useAnimation();
