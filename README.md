@@ -5,6 +5,7 @@
 ![Vite](https://img.shields.io/badge/Vite-5.1.6-646cff?style=flat&logo=vite)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.1-38bdf8?style=flat&logo=tailwindcss)
 
+
 Landing page moderna y responsiva para **BOTSCONIA**, un sistema de IA para la gestión automatizada de reservas en restaurantes mediante asistentes de voz inteligentes.
 
 ## 📋 Descripción
