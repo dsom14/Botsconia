@@ -31,7 +31,7 @@ const About = () => {
                 <p className="text-accent-cyan">Especialista en IA</p>
               </div>
             </div>
-            <p className="mt-4 text-white/80">Graduado en Estudios Clásicos con un dominio C1 de inglés, David aporta una perspectiva única y una profunda experiencia en inteligencia artificial para revolucionar la comunicación.</p>
+            <p className="mt-4 text-white/80 text-justify">Cofundador de Botsconia, obtuvo matrícula de honor en Bachillerato y actualmente cursa Estudios Clásicos y Románicos en la Universidad de Oviedo, complementando su formación con estudios en Inteligencia Artificial y Automatización de Procesos. Posee nivel C1 en inglés y se caracteriza por su rigurosidad, innovación y compromiso con la excelencia.</p>
           </motion.div>
           <motion.div variants={cardVariants} className="rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
             <div className="flex items-center gap-6">
@@ -43,7 +43,7 @@ const About = () => {
                 <p className="text-accent-red">Desarrollador Principal</p>
               </div>
             </div>
-            <p className="mt-4 text-white/80">Técnico Superior en Desarrollo de Aplicaciones Multiplataforma con valiosa experiencia en Saint Gobain, Adrián es el arquitecto de nuestra robusta y eficiente tecnología.</p>
+            <p className="mt-4 text-white/80 text-justify">Cofundador de Botsconia, titulado en Microsistemas Informáticos y en Red, actualmente cursa un Grado Superior en Administración de Sistemas Informáticos en Red. Ha realizado formación en la empresa Saint-Gobain y amplía su perfil con estudios en Inteligencia Artificial aplicada a los negocios. Se distingue por su solidez técnica, enfoque resolutivo y visión creativa.</p>
           </motion.div>
         </div>
 
@@ -58,7 +58,7 @@ const About = () => {
             </div>
           </div>
           <h2 className="text-4xl font-bold text-white lg:text-5xl">Nuestra <span className="text-accent-cyan">Historia</span></h2>
-          <p className="mt-6 text-lg text-white/80">
+          <p className="mt-6 text-lg text-white/80 text-justify">
             Nacimos de una visión compartida: eliminar las ineficiencias en la gestión de restaurantes. David y Adrián, combinando su pasión por la IA y el desarrollo de software de vanguardia, crearon BOTSCONIA para ofrecer una solución que no solo automatiza, sino que perfecciona la interacción con el cliente.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">

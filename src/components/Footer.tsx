@@ -1,4 +1,4 @@
-import { Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -14,9 +14,7 @@ const Footer = () => {
           <a href="#contact" className="hover:text-accent-cyan transition-colors">Contacto</a>
         </div>
         <div className="flex gap-6">
-          <a href="#" className="text-white/70 hover:text-accent-cyan transition-colors"><Twitter /></a>
-          <a href="#" className="text-white/70 hover:text-accent-cyan transition-colors"><Instagram /></a>
-          <a href="#" className="text-white/70 hover:text-accent-cyan transition-colors"><Linkedin /></a>
+          <a href="https://www.instagram.com/botsconia?igsh=MW84cmV1OTI3MnhnMQ==" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-accent-cyan transition-colors"><Instagram /></a>
         </div>
       </div>
       <div className="mt-8 border-t border-white/10 pt-8 text-center text-sm text-white/50">

@@ -27,7 +27,7 @@ const CTA = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-white/80"
         >
-          El futuro de la gestión de restaurantes ya está aquí. No dejes que tu negocio se quede atrás. Es hora de automatizar, optimizar y crecer.
+          El futuro de la gestión de restaurantes ya está aquí. No dejes que tu negocio se quede atrás. Es hora de automatizar, LA CALIDAD Y LA MANERA EN LA QUE TRATES A TUS CLIENTES VA A MARCAR LA DIFERENCIA.
         </motion.p>
         <motion.a
           href="#contact"
