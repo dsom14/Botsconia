@@ -37,6 +37,9 @@ Esta landing page presenta todos los servicios y beneficios de BOTSCONIA con un 
 - **[React Intersection Observer 9.8.1](https://github.com/thebuilder/react-intersection-observer)** - Detección de visibilidad de elementos
 - **[Lucide React 0.354.0](https://lucide.dev/)** - Iconos SVG optimizados
 
+### Integración IA
+- **[@vapi-ai/web 2.5.0](https://vapi.ai/)** - SDK de Vapi AI para asistentes de voz inteligentes
+
 ### Desarrollo
 - **[ESLint 8.57.0](https://eslint.org/)** - Linter de código
 - **[@vitejs/plugin-react 4.2.1](https://github.com/vitejs/vite-plugin-react)** - Plugin oficial de React para Vite
@@ -64,7 +67,8 @@ botsconia-landing/
 │   │   ├── CTA.tsx          # Call to action
 │   │   ├── Contact.tsx      # Formulario de contacto
 │   │   ├── Footer.tsx       # Pie de página
-│   │   └── PersonIcon.tsx   # Icono personalizado
+│   │   ├── PersonIcon.tsx   # Icono personalizado
+│   │   └── VapiButton.tsx   # Botón flotante de asistente de voz
 │   ├── App.tsx              # Componente principal
 │   ├── main.tsx             # Punto de entrada
 │   └── index.css            # Estilos globales + Tailwind
@@ -73,6 +77,7 @@ botsconia-landing/
 ├── vite.config.ts           # Configuración de Vite
 ├── postcss.config.js        # Configuración de PostCSS
 ├── package.json             # Dependencias del proyecto
+├── .env.example             # Variables de entorno de ejemplo
 └── .gitignore               # Archivos ignorados por Git
 ```
 
@@ -106,11 +111,76 @@ botsconia-landing/
    npm install
    ```
 
-3. **Iniciar servidor de desarrollo**
+3. **Configurar variables de entorno**
+   ```bash
+   # Copiar el archivo de ejemplo
+   cp .env.example .env
+
+   # Editar .env y agregar tus credenciales de Vapi AI
+   # VITE_VAPI_PUBLIC_KEY=tu_clave_publica
+   # VITE_VAPI_ASSISTANT_ID=tu_id_de_asistente
+   ```
+
+4. **Iniciar servidor de desarrollo**
    ```bash
    npm run dev
    ```
    La aplicación estará disponible en `http://localhost:5173`
+
+## 🤖 Configuración de Vapi AI
+
+Esta landing page incluye integración con **Vapi AI** para un asistente de voz interactivo que permite a los usuarios comunicarse directamente con el bot.
+
+### Obtener credenciales de Vapi
+
+1. **Crear cuenta en Vapi AI**
+   - Visita [https://vapi.ai](https://vapi.ai)
+   - Regístrate o inicia sesión
+
+2. **Obtener Public Key**
+   - En el dashboard de Vapi, ve a Settings → API Keys
+   - Copia tu **Public Key** (comienza con `pk_`)
+
+3. **Crear un Asistente**
+   - En el dashboard, ve a "Assistants"
+   - Crea un nuevo asistente o copia el ID de uno existente
+   - El ID del asistente es necesario para iniciar las llamadas
+
+4. **Configurar variables de entorno**
+   ```bash
+   # En tu archivo .env
+   VITE_VAPI_PUBLIC_KEY=pk_tu_clave_publica_aqui
+   VITE_VAPI_ASSISTANT_ID=tu_id_de_asistente_aqui
+   ```
+
+### Funcionamiento del VapiButton
+
+El componente `VapiButton` aparece como un botón flotante en la esquina inferior derecha de la página:
+
+- **Click para iniciar**: Inicia una llamada de voz con el asistente de IA
+- **Click para terminar**: Finaliza la llamada activa
+- **Indicadores visuales**:
+  - Animación de pulso cuando la llamada está activa
+  - Anillo brillante cuando el asistente está hablando
+  - Spinner durante la carga
+
+### Personalizar el asistente
+
+Puedes personalizar el comportamiento del asistente desde el dashboard de Vapi:
+- Voz (tono, acento, velocidad)
+- Prompt del sistema
+- Funciones y herramientas
+- Modelo de IA (GPT-4, etc.)
+
+### Deploy en Vercel con Vapi
+
+Al desplegar en Vercel, asegúrate de agregar las variables de entorno:
+
+1. En Vercel Dashboard → Settings → Environment Variables
+2. Agregar:
+   - `VITE_VAPI_PUBLIC_KEY`
+   - `VITE_VAPI_ASSISTANT_ID`
+3. Redesplegar la aplicación
 
 ## 🛠️ Scripts Disponibles
 
